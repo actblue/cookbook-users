@@ -147,7 +147,7 @@ action :create do
     if new_resource.group_id
       gid new_resource.group_id
     end
-    members security_group
+    members security_group.sort
   end
   new_resource.updated_by_last_action(true)
 end
